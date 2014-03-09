@@ -53,3 +53,24 @@ class Tanque (as: Array[Arma], b: Int, n: String) {
 			return armas(index_de_arma)
 	}
 }
+
+class Tanque_fantasma (as: Array[Arma], b: Int, n: String) extends Tanque(as: Array[Arma], b: Int, n: String) {
+	
+	var mode_ghost: Boolean = false
+	
+	def start_mode_ghost() {
+	  	this.mode_ghost = true
+	}
+	
+	def stop_mode_ghost() {
+		this.mode_ghost = false
+	}
+
+	override def daniate(danio: Int) {
+		if (this.mode_ghost) 
+		  println("\nAca no hay nadie :p\n")
+		else
+		  super.daniate(danio)
+	}
+	
+}

@@ -11,7 +11,8 @@ object workspace {
 		val arma_agua = new Arma(1,"Agua",1,(emisor: Tanque, _) => emisor.nombre == "Optimus Prime")
 		val arma_letal = new Arma(1000,"Metra super",1000,uso_letal)
 		val vector_armas = Array(arma_metra,arma_xxx)
-		val tanque1 = new Tanque(vector_armas:+arma_letal,100,":D")
+		
+		val tanque1 = new Tanque_fantasma(vector_armas:+arma_letal,100,":D")
 		val optimus_prime = new Tanque(vector_armas:+arma_agua,21,"Optimus Prime")
 		
 		tanque1.atacar_a(optimus_prime, "Metra")
@@ -25,6 +26,11 @@ object workspace {
 		optimus_prime.atacar_a(tanque1,"XXX")
 		println("Tanque1 blindaje: " + tanque1.blindaje)
 		println("Optimus blindaje: " + optimus_prime.blindaje)
+		tanque1.start_mode_ghost()
+		optimus_prime.atacar_a(tanque1,"XXX")
+		println("Tanque1 blindaje: " + tanque1.blindaje)
+		println("Optimus blindaje: " + optimus_prime.blindaje)
+		tanque1.stop_mode_ghost()
 		optimus_prime.atacar_a(tanque1,"XXX")
 		println("Tanque1 blindaje: " + tanque1.blindaje)
 		println("Optimus blindaje: " + optimus_prime.blindaje)
