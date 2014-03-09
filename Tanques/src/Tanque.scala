@@ -24,5 +24,8 @@ class Tanque (as: Array[Arma], b: Int, n: String) {
 		println("Me mori :( (soy el tanque "+this.nombre+")")
 	}
 	
-	def buscar_arma_a_usar(nombre_arma_usar: String): Arma = armas(armas.indexWhere((arma: Arma) => arma.nombre == nombre_arma_usar))
+	def buscar_arma_a_usar(nombre_arma_usar: String): Arma = {
+			var index_de_arma = armas.indexWhere((arma: Arma) => arma.nombre == nombre_arma_usar)
+			return armas(index_de_arma)
+	}
 }
