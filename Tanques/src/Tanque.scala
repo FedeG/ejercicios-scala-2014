@@ -16,7 +16,7 @@ class Tanque (as: Array[Arma], b: Int, n: String) {
 	
 	def asesinaste_a_con_el_arma(tanque_a_atacar: Tanque, arma_a_usar: Arma): Boolean = {
 		var lo_mato = false
-		if (arma_a_usar.puede_usarse(this,tanque_a_atacar)) lo_mato = (tanque_a_atacar.blindaje < arma_a_usar.danio)
+		if (tanque_a_atacar.vivo && arma_a_usar.puede_usarse(this,tanque_a_atacar)) lo_mato = (tanque_a_atacar.blindaje < arma_a_usar.danio)
 		return lo_mato
 	}
 	
@@ -40,7 +40,7 @@ class Tanque (as: Array[Arma], b: Int, n: String) {
 		this.blindaje = 0
 		this.armas = Array()
 		this.vivo = false
-		println("Me mori :( (soy el tanque "+this.nombre+")")
+		println("\nMe mori :( (soy el tanque "+this.nombre+")\n")
 	}
 	
 	def tenes_el_arma(nombre_arma: String): Boolean = {
