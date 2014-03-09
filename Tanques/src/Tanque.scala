@@ -7,7 +7,7 @@ class Tanque (as: Array[Arma], b: Int, n: String) {
 	def atacar_a(tanque_a_atacar: Tanque, nombre_arma_usar: String) {
 	  	if (this.vivo) {
 	  		var arma_a_usar = this.buscar_arma_a_usar(nombre_arma_usar)
-	  		arma_a_usar.ataca_a(tanque_a_atacar)
+	  		arma_a_usar.ataca_a(this,tanque_a_atacar)
 	  	}
 	}
 	
