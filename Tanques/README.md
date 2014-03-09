@@ -10,4 +10,4 @@ Los temas hasta ahora hechos son:
 - Variables anónimas
 - Funciones anónimas (lambda)
 - Condicióneles
-- Retorno en funciones
+- Retorno en funciones (de las dos maneras posibles)
