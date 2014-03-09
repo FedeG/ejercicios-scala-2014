@@ -54,7 +54,7 @@ class Tanque (as: Array[Arma], b: Int, n: String) {
 	}
 }
 
-class Tanque_fantasma (as: Array[Arma], b: Int, n: String) extends Tanque(as: Array[Arma], b: Int, n: String) {
+class Tanque_fantasma (armas: Array[Arma], blindaje: Int, nombre: String) extends Tanque(armas,blindaje,nombre) {
 	
 	var mode_ghost: Boolean = false
 	
