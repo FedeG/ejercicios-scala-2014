@@ -1,8 +1,12 @@
 object workspace {
 	def main(args: Array[String]){
 	  
-	  val pikachu = new Pokemon("Pikachu")
+	  /*Probando incializacion default de clase*/
+	  val pikachu = new Pokemon()
+	  println(pikachu.name())
 	  
-	  pikachu.deciTuNombre
+	  /*Probando sobrecarga de mètodos*/
+	  pikachu.name("Pikachu")
+	  println(pikachu.name())
 	}
 }
