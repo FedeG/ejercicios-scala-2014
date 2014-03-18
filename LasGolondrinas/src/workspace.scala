@@ -31,5 +31,8 @@ object workspace {
 	  //Armar oraciones a partir 
 	  //de la lista golondrinas con foreach
 	  golondrinas.foreach(g => println("Hola! Yo soy la golondrina "+g.nombre+" y mi salud es "+g.salud))
+	
+	  val notas = List(9,5,7,9,9,5,5,10,6,7,9,6,2,2)
+	  println(notas.sum+" "+notas.length)
 	}
 }

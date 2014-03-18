@@ -14,4 +14,8 @@ class Golondrina(s: Int = 0, c: String = "Capital", n: String = "Golondrina Alea
 	def name(name: String){nombre = name}
 	def city(): String = this.ciudad
 	def city(unaCiudad: String){this.ciudad = unaCiudad}
+	def salud1(): String = {
+	  println(this.ciudad)
+	  return this.ciudad
+	}
 }
